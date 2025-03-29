@@ -169,10 +169,322 @@
             </header>
 
             <main>
-                <!-- Main content goes here -->
-                <h1>Dashboard</h1>
-                <div class="dashboard-content">
-                    <!-- Dashboard content would go here -->
+                <!-- Overview Section -->            
+                <div class="dashboard-grid">
+                    <div class="left-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Overview</h2>
+                        </div>
+                        <div class="card-grid">
+                            <!-- Balance Card -->
+                            <div class="card balance-card">
+                                <div class="card-header">
+                                    <div class="card-icon-highlighted">
+                                        <img src="icons/dashboard/wallet.svg" alt="Wallet" />
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">Your Balance</h3>
+                                        <div class="card-stats">
+                                            <div class="card-compare">
+                                                <img src="icons/dashboard/arrow-top.svg" class="arrow-icon" alt="Up" />
+                                                <span>15 % compared with last month</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="card-separator"></div>
+                            
+                                <div class="card-footer">
+                                    <div class="card-amount">$28,891.138</div>
+                                    <div class="card-action">
+                                        <img src="icons/dashboard/arrow-right.svg" alt="Arrow" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Saving Card -->
+                            <div class="card saving-card">
+                                <div class="card-header">
+                                    <div class="card-icon">
+                                        <img src="icons/dashboard/saving.svg" alt="Saving" />
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">Saving</h3>
+                                        <div class="card-stats">
+                                            <div class="card-compare-white">
+                                                <img src="icons/dashboard/saving-arrow.svg" class="arrow-icon" alt="Up" />
+                                                <span>10 % compared with last month</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="card-separator-white"></div>
+                            
+                                <div class="card-footer">
+                                    <div class="card-amount">$1,050.44</div>
+                                    <div class="card-action-black">
+                                        <img src="icons/dashboard/arrow-right-black.svg" alt="Arrow" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Expenses Card -->
+                            <div class="card expense-card">
+                                <div class="card-header">
+                                    <div class="card-icon">
+                                        <img src="icons/dashboard/expense.svg" alt="Expense" />
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">Expenses</h3>
+                                        <div class="card-stats">
+                                            <div class="card-compare-white">
+                                                <img src="icons/dashboard/expense-arrow.svg" class="arrow-icon" alt="Up" />
+                                                <span>7 % compared with last month</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="card-separator-white"></div>
+                            
+                                <div class="card-footer">
+                                    <div class="card-amount">$200.31</div>
+                                    <div class="card-action-black">
+                                        <img src="icons/dashboard/arrow-right-black.svg" alt="Arrow" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Income Card -->
+                            <div class="card income-card">
+                                <div class="card-header">
+                                    <div class="card-icon">
+                                        <img src="icons/dashboard/income.svg" alt="Income" />
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-title">Incomes</h3>
+                                        <div class="card-stats">
+                                            <div class="card-compare-white">
+                                                <img src="icons/dashboard/income-arrow.svg" class="arrow-icon" alt="Up" />
+                                                <span>8 % compared with last month</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="card-separator-white"></div>
+                            
+                                <div class="card-footer">
+                                    <div class="card-amount">$21,121.0</div>
+                                    <div class="card-action-black">
+                                        <img src="icons/dashboard/arrow-right-black.svg" alt="Arrow" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Saving Plan Section -->
+                    <div class="saving-card">
+                        <div class="section-header">
+                            <h3 class="section-title">Saving Plan</h3>
+                            <a href="#" class="see-all">See All</a>
+                        </div>
+
+                        <div class="card-separator-white"></div>
+            
+                        <div class="saving-plan-card">
+                            <!-- Bali Vacation -->
+                            <div class="plan-item">
+                                <div class="plan-header">
+                                    <div class="plan-title">Bali Vacation</div>
+                                    <div class="plan-target">Target: August 25 2022</div>
+                                </div>
+                                <div class="plan-amount">
+                                    <span class="discounted-price">$1950.21 <span class="orginal-price">/$4000</span></span>
+                                    <div class="plan-percentage">48%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-blue" style="width: 48%"></div>
+                                </div>
+                            </div>
+            
+                            <!-- New Gadget -->
+                            <div class="plan-item">
+                                <div class="plan-header">
+                                    <div class="plan-title">New Gadget</div>
+                                    <div class="plan-target">Target: August 25 2022</div>
+                                </div>
+                                <div class="plan-amount">
+                                    <span class="discounted-price">$790.21 <span class="orginal-price">/$1000</span></span>
+                                    <div class="plan-percentage-gadget">79%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-yellow" style="width: 79%"></div>
+                                </div>
+                            </div>
+            
+                            <!-- Charity -->
+                            <div class="plan-item">
+                                <div class="plan-header">
+                                    <div class="plan-title">Charity</div>
+                                    <div class="plan-target">Target: August 25 2022</div>
+                                </div>
+                                <div class="plan-amount">
+                                    <span class="discounted-price">$32.11 <span class="orginal-price">/$100</span></span>
+                                    <div class="plan-percentage-charity">32%</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill progress-green" style="width: 32%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Analytics and Recent Transactions -->
+                <div class="dashboard-grid">
+                    <!-- Analytics Section -->
+                    <div class="card">
+                        <div class="section-header">
+                            <h3 class="section-title">Analytics</h3>
+            
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color blue-dot"></span>
+                                    <span>Label 1</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color yellow-dot"></span>
+                                    <span>Label 2</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="chart-container">
+                            <div class="chart-line line-blue"></div>
+                            <div class="line-yellow"></div>
+                        </div>
+            
+                        <div class="chart-days">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                    </div>
+            
+                    <!-- Recent Transactions -->
+                    <div class="card">
+                        <div class="section-header">
+                            <h3 class="section-title">Recent Transaction</h3>
+                            <a href="#" class="see-all">See All</a>
+                        </div>
+            
+                        <div class="transaction-list">
+                            <!-- Figma Transaction -->
+                            <div class="transaction-item">
+                                <div class="transaction-left">
+                                    <div class="transaction-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                            <polyline points="2 17 12 22 22 17"></polyline>
+                                            <polyline points="2 12 12 17 22 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-name">Figma</div>
+                                        <div class="transaction-date">August 20, 2022</div>
+                                    </div>
+                                </div>
+                                <div class="transaction-right">
+                                    <div class="transaction-amount">$100</div>
+                                    <div class="transaction-status">Completed</div>
+                                </div>
+                            </div>
+            
+                            <!-- Youtube Transaction -->
+                            <div class="transaction-item">
+                                <div class="transaction-left">
+                                    <div class="transaction-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                            </path>
+                                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                        </svg>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-name">Youtube</div>
+                                        <div class="transaction-date">August 21, 2022</div>
+                                    </div>
+                                </div>
+                                <div class="transaction-right">
+                                    <div class="transaction-amount">$120</div>
+                                    <div class="transaction-status">Completed</div>
+                                </div>
+                            </div>
+            
+                            <!-- Spotify Transaction -->
+                            <div class="transaction-item">
+                                <div class="transaction-left">
+                                    <div class="transaction-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <circle cx="12" cy="12" r="4"></circle>
+                                            <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                                            <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                                            <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                                            <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                                            <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-name">Spotify</div>
+                                        <div class="transaction-date">August 22, 2022</div>
+                                    </div>
+                                </div>
+                                <div class="transaction-right">
+                                    <div class="transaction-amount">$15</div>
+                                    <div class="transaction-status">Completed</div>
+                                </div>
+                            </div>
+            
+                            <!-- Freepik Transaction -->
+                            <div class="transaction-item">
+                                <div class="transaction-left">
+                                    <div class="transaction-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-name">Freepik</div>
+                                        <div class="transaction-date">August 23, 2022</div>
+                                    </div>
+                                </div>
+                                <div class="transaction-right">
+                                    <div class="transaction-amount">$300</div>
+                                    <div class="transaction-status">Completed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
