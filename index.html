@@ -13,148 +13,154 @@
 
 <body>
     <div class="main-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <div class="logo-placeholder">
-                    <img src="icons/image.svg" alt="Image Icon">
-                </div>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-placeholder">
+                <img src="icons/image.svg" alt="Image Icon">
             </div>
+        </div>
 
-            <nav class="menu">
-                <ul>
-                    <li class="active">
-                        <a href="#">
-                            <span class="menu-icon dashboard-icon">
-                                <img src="icons/sidebar/dashboard.svg" alt="Image Icon" />
-                            </span>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                            <img src="icons/sidebar/Calendar.svg" alt="Image Icon" />
-                            </span>
-                            <span>Schedule</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                            <img src="icons/sidebar/sms.svg" alt="Image Icon" />
-                            </span>
-                            <span>Message</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                            <img src="icons/sidebar/Chart.svg" alt="Image Icon" />
-                            </span>
-                            <span>Analytics</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                            <img src="icons/sidebar/team.svg" alt="Image Icon" />
-                            </span>
-                            <span>Team</span>
-                        </a>
-                    </li>
-                </ul>
+        <nav class="menu">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <span class="menu-icon dashboard-icon">
+                            <img src="icons/sidebar/dashboard.svg" alt="Dashboard Icon" />
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <img src="icons/sidebar/Calendar.svg" alt="Calendar Icon" />
+                        </span>
+                        <span>Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <img src="icons/sidebar/sms.svg" alt="Message Icon" />
+                        </span>
+                        <span>Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <img src="icons/sidebar/Chart.svg" alt="Analytics Icon" />
+                        </span>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <img src="icons/sidebar/team.svg" alt="Team Icon" />
+                        </span>
+                        <span>Team</span>
+                    </a>
+                </li>
+            </ul>
 
-                <div class="team-separator"></div>
+            <div class="team-separator"></div>
 
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                            </span>
-                            <span>Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                    <path
-                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-            <nav class="bottom-menu">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                                </svg>
-                            </span>
-                            <span>Help</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="menu-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                    <polyline points="16 17 21 12 16 7"></polyline>
-                                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                                </svg>
-                            </span>
-                            <span>Logout</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+        <nav class="bottom-menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </span>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
         <div class="content-wrapper">
             <header class="navbar">
-                <div class="search-container">
-                    <label for="search" class="sr-only">Search</label>
-                    <div class="search-wrapper">
-                        <span class="search-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-search">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </span>
-                        <input type="text" id="search" placeholder="Search here..." class="search-input">
+                <div class="navbar-left">
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+            
+                    <div class="search-container">
+                        <label for="search" class="sr-only">Search</label>
+                        <div class="search-wrapper">
+                            <span class="search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </span>
+                            <input type="text" id="search" placeholder="Search here..." class="search-input">
+                        </div>
                     </div>
                 </div>
                 <div class="navbar-actions">
                     <button class="icon-button" aria-label="Notifications">
-                        <img src="icons/navbar/notification.svg" alt="Image Icon" />
+                        <img src="icons/navbar/notification.svg" alt="Notification Icon" />
                     </button>
                     <button class="icon-button" aria-label="Messages">
-                        <img src="icons/navbar/message.svg" alt="Image Icon" />
+                        <img src="icons/navbar/message.svg" alt="Message Icon" />
                     </button>
                     <div class="user-profile">
                         <button class="user-icon" aria-label="profile">
@@ -168,7 +174,6 @@
                                 <div class="dropdown-item" data-value="yearly"><i class="fas fa-sign-out-alt"></i> Logout</div>
                             </div>
                         </div>
-                       
                     </div>
                 </div>
             </header>
