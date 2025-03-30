@@ -190,10 +190,10 @@ ul {
 
 /* Navbar styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
     gap: 24px;
+    align-items: center;   
     padding: 15px 25px;
     height: 80px;
 }
@@ -252,6 +252,33 @@ ul {
     border-radius: 50px;
     padding: 10px 15px;
     gap: 15px;
+}
+
+ .user-dropdown {
+     position: relative;
+ }
+
+.user-dropdown-button {
+    background-color: transparent   ;
+    border: none;
+    white-space: nowrap;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.user-dropdown-button::after {
+    content: '';
+    display: inline-block;
+    margin-left: 8px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid var(--text-secondary);
 }
 
 .icon-button {
@@ -486,7 +513,7 @@ main {
 
  .card-separator-white {
      border: 1px solid #0D163A;
-     opacity: 20%;
+     opacity: 10%;
      margin: 0;
  }
 
@@ -560,8 +587,8 @@ main {
      gap: 20px;
  }
 
- .saving-card {
-     border-radius: 24px;
+ .side-card {
+     border-radius: 14px;
      padding: 24px;
      display: flex;
      border: none;
@@ -645,95 +672,182 @@ main {
     overflow: hidden;
 }
         
+@keyframes progressGrow {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: var(--target-width);
+    }
+}
+
 .progress-fill {
     height: 100%;
     border-radius: 4px;
+    animation: progressGrow 1.5s ease-out forwards;
 }
         
 .progress-blue {
     background-color: var(--primary-blue);
+    --target-width: 48%;
 }
-        
+
 .progress-yellow {
     background-color: var(--primary-yellow);
+    --target-width: 79%;
 }
-        
+
 .progress-green {
     background-color: var(--primary-green);
+    --target-width: 32%;
 }
-        
-.chart-container {
-    height: 200px;
-    margin-top: 20px;
-    position: relative;
-}
-        
-.chart-legend {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 16px;
-}
-        
-.legend-item {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-        
-.legend-color {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-        
-.blue-dot {
-    background-color: var(--primary-blue);
-}
-        
-.yellow-dot {
-    background-color: var(--primary-yellow);
-}
-        
-.chart-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    display: flex;
-    align-items: flex-end;
-}
-        
-.line-blue {
-    background-color: rgba(99, 102, 241, 0.2);
-    clip-path: polygon(0% 100%, 5% 70%, 10% 50%, 15% 60%, 20% 40%, 25% 60%, 30% 80%, 35% 70%, 40% 50%, 45% 40%, 50% 10%, 55% 30%, 60% 40%, 65% 20%, 70% 30%, 75% 40%, 80% 30%, 85% 40%, 90% 60%, 95% 50%, 100% 60%, 100% 100%);
-}
-        
-.line-yellow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border-bottom: 2px solid var(--primary-yellow);
-    clip-path: polygon(0% 90%, 5% 85%, 10% 80%, 15% 85%, 20% 80%, 25% 75%, 30% 80%, 35% 70%, 40% 80%, 45% 75%, 50% 70%, 55% 75%, 60% 70%, 65% 75%, 70% 70%, 75% 65%, 80% 70%, 85% 75%, 90% 70%, 95% 65%, 100% 70%);
-}
-        
-.chart-days {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 12px;
-    color: var(--text-secondary);
-}
+
+ .analytics-card {
+     background-color: white;
+     border-radius: 16px;
+     padding: 24px;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+     width: 100%;
+     margin: 0 auto;
+ }
+
+ .card-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 16px;
+ }
+
+ .title {
+     font-size: 20px;
+     font-weight: 600;
+     margin: 0;
+     color: #0f172a;
+ }
+
+ .legend-container {
+     display: flex;
+     align-items: center;
+     gap: 24px;
+ }
+
+ .dropdown {
+     margin-left: 24px;
+     position: relative;
+ }
+
+ .dropdown-button {
+     background-color: white;
+     border: 1px solid #e2e8f0;
+     border-radius: 8px;
+     padding: 6px 16px;
+     font-size: 14px;
+     color: var(--text-secondary);
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+ }
+
+ .dropdown-button::after {
+     content: '';
+     display: inline-block;
+     margin-left: 8px;
+     width: 0;
+     height: 0;
+     border-left: 4px solid transparent;
+     border-right: 4px solid transparent;
+     border-top: 4px solid var(--text-secondary);
+ }
+
+ .dropdown-menu {
+     position: absolute;
+     top: 100%;
+     right: 0;
+     min-width: 100%;
+     background-color: white;
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     padding: 8px 0;
+     margin-top: 4px;
+     z-index: 10;
+     display: none;
+ }
+
+ .dropdown-menu.show {
+     display: block;
+ }
+
+ .dropdown-item {
+     padding: 8px 16px;
+     font-size: 14px;
+     color: var(--text-dark);
+     cursor: pointer;
+     white-space: nowrap;
+ }
+
+ .dropdown-item:hover {
+     background-color: #f8fafc;
+ }
+
+ .legend-item {
+     display: flex;
+     align-items: center;
+ }
+
+ .legend-dot {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     margin-right: 8px;
+ }
+
+ .blue-dot {
+     background-color: var(--primary-blue);
+ }
+
+ .yellow-dot {
+     background-color: var(--primary-yellow);
+ }
+
+ .legend-text {
+     font-size: 14px;
+     color: var(--text-secondary);
+ }
+
+ .chart-container {
+     height: 300px;
+     position: relative;
+     margin-top: 20px;
+ }
+
+ canvas {
+     width: 100% !important;
+     height: 300px !important;
+ }
+
+ .y-axis-labels {
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 10px 0;
+     color: var(--text-secondary);
+     font-size: 14px;
+ }
+
+ .y-label {
+     line-height: 1;
+ }
         
 /* Transactions Styles */
 .transaction-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 25px;
 }
         
 .transaction-item {

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -155,15 +158,17 @@
                     </button>
                     <div class="user-profile">
                         <button class="user-icon" aria-label="profile">
-                            <img src="icons/image.svg" alt="Image Icon" />
+                            <img src="icons/image.svg" alt="User Avatar" />
                         </button>
-                        
-                        <span class="user-name">Mirie Kiritani</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-chevron-down">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
+                        <div class="user-dropdown">
+                            <button id="dropdown-toggle" class="user-dropdown-button user-name">Mirie Kiritani</button>
+                            <div id="dropdown-menu" class="dropdown-menu">
+                                <div class="dropdown-item" data-value="weekly"><i class="fas fa-user"></i> Profile</div>
+                                <div class="dropdown-item" data-value="monthly"><i class="fas fa-cog"></i> Settings</div>
+                                <div class="dropdown-item" data-value="yearly"><i class="fas fa-sign-out-alt"></i> Logout</div>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
             </header>
@@ -287,7 +292,7 @@
                     </div>
             
                     <!-- Saving Plan Section -->
-                    <div class="saving-card">
+                    <div class="side-card">
                         <div class="section-header">
                             <h3 class="section-title">Saving Plan</h3>
                             <a href="#" class="see-all">See All</a>
@@ -347,57 +352,53 @@
                 <!-- Analytics and Recent Transactions -->
                 <div class="dashboard-grid">
                     <!-- Analytics Section -->
-                    <div class="card">
-                        <div class="section-header">
-                            <h3 class="section-title">Analytics</h3>
-            
-                            <div class="chart-legend">
-                                <div class="legend-item">
-                                    <span class="legend-color blue-dot"></span>
-                                    <span>Label 1</span>
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h2 class="title">Analytics</h2>
+                    
+                            <div style="display: flex; align-items: center;">
+                                <div class="legend-container">
+                                    <div class="legend-item">
+                                        <span class="legend-dot blue-dot"></span>
+                                        <span class="legend-text">Label1</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-dot yellow-dot"></span>
+                                        <span class="legend-text">Label1</span>
+                                    </div>
                                 </div>
-                                <div class="legend-item">
-                                    <span class="legend-color yellow-dot"></span>
-                                    <span>Label 2</span>
+                    
+                                <div class="dropdown">
+                                    <button id="dropdown-toggle" class="dropdown-button">Weekly</button>
+                                    <div id="dropdown-menu" class="dropdown-menu">
+                                        <div class="dropdown-item" data-value="weekly">Weekly</div>
+                                        <div class="dropdown-item" data-value="monthly">Monthly</div>
+                                        <div class="dropdown-item" data-value="yearly">Yearly</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-            
+                    
                         <div class="chart-container">
-                            <div class="chart-line line-blue"></div>
-                            <div class="line-yellow"></div>
-                        </div>
-            
-                        <div class="chart-days">
-                            <div>Sun</div>
-                            <div>Mon</div>
-                            <div>Tue</div>
-                            <div>Wed</div>
-                            <div>Thu</div>
-                            <div>Fri</div>
-                            <div>Sat</div>
+                            <canvas id="analytics-chart"></canvas>
                         </div>
                     </div>
             
                     <!-- Recent Transactions -->
-                    <div class="card">
+                    <div class="side-card">
                         <div class="section-header">
                             <h3 class="section-title">Recent Transaction</h3>
                             <a href="#" class="see-all">See All</a>
                         </div>
             
+                                                <div class="card-separator-white"></div>
+
                         <div class="transaction-list">
                             <!-- Figma Transaction -->
                             <div class="transaction-item">
                                 <div class="transaction-left">
-                                    <div class="transaction-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                            <polyline points="2 17 12 22 22 17"></polyline>
-                                            <polyline points="2 12 12 17 22 12"></polyline>
-                                        </svg>
+                                    <div class="transaction-icon" aria-label="profile">
+                                        <img src="icons/image.svg" alt="Image Icon" />
                                     </div>
                                     <div class="transaction-details">
                                         <div class="transaction-name">Figma</div>
@@ -413,15 +414,8 @@
                             <!-- Youtube Transaction -->
                             <div class="transaction-item">
                                 <div class="transaction-left">
-                                    <div class="transaction-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path
-                                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-                                            </path>
-                                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                                        </svg>
+                                    <div class="transaction-icon" aria-label="profile">
+                                        <img src="icons/image.svg" alt="Image Icon" />
                                     </div>
                                     <div class="transaction-details">
                                         <div class="transaction-name">Youtube</div>
@@ -437,18 +431,8 @@
                             <!-- Spotify Transaction -->
                             <div class="transaction-item">
                                 <div class="transaction-left">
-                                    <div class="transaction-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <circle cx="12" cy="12" r="4"></circle>
-                                            <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
-                                            <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
-                                            <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
-                                            <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
-                                            <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
-                                        </svg>
+                                    <div class="transaction-icon" aria-label="profile">
+                                        <img src="icons/image.svg" alt="Image Icon" />
                                     </div>
                                     <div class="transaction-details">
                                         <div class="transaction-name">Spotify</div>
@@ -464,14 +448,8 @@
                             <!-- Freepik Transaction -->
                             <div class="transaction-item">
                                 <div class="transaction-left">
-                                    <div class="transaction-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path
-                                                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
-                                            </path>
-                                        </svg>
+                                    <div class="transaction-icon" aria-label="profile">
+                                        <img src="icons/image.svg" alt="Image Icon" />
                                     </div>
                                     <div class="transaction-details">
                                         <div class="transaction-name">Freepik</div>
