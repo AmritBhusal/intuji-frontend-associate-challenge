@@ -5,6 +5,18 @@
      const hamburgerMenu = document.getElementById('hamburger-menu');
      const sidebar = document.getElementById('sidebar');
      const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const cards = document.querySelectorAll('.card');
+    
+    const balanceCard = document.querySelector('.balance-card');
+    balanceCard.classList.add('selected');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            cards.forEach(c => c.classList.remove('selected'));
+            
+            this.classList.add('selected');
+        });
+    });
 
 
      dropdownToggle.addEventListener('click', function() {
