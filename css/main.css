@@ -206,7 +206,7 @@ ul {
     display: block;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
     .hamburger-menu {
         display: flex;
     }
@@ -226,7 +226,7 @@ ul {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .navbar {
         padding: 15px;
     }
@@ -436,7 +436,7 @@ main {
     flex: 1;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .search-container {
         max-width: 200px;
     }
