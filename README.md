@@ -21,18 +21,18 @@ A modern, responsive admin dashboard built with HTML, CSS, and JavaScript. This 
 
 ## Live Demo
 
-[View Demo](https://yourusername.github.io/admin-dashboard)
+[View Demo](https://intuji-frontend-associate-challenge-one.vercel.app/)
 
 ## Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/admin-dashboard.git
+   git clone https://github.com/AmritBhusal/intuji-frontend-associate-challenge.git
    ```
 
 2. Navigate to the project directory:
    ```
-   cd admin-dashboard
+   cd intuji-frontend-associate-challenge
    ```
 
 3. Open `index.html` in your browser or use a local server.
