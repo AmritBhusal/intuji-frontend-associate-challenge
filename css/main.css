@@ -5,6 +5,7 @@
     --primary-green: #3BBB6E;
     --card-border: #DEDEDE;
     --text-dark: #333;
+    --text-color:#0D163A;
     --text-secondary: #666;
     --border-color: #eaedf2;
     --bg-light: #f8f9fc;
@@ -165,7 +166,7 @@ ul {
 .team-separator {
     margin-top: 15px;
     margin-bottom: 15px;
-    border-bottom: 1px solid #0D163A;
+    border-bottom: 1px solid var(--text-color);
 }
 
 /* Hamburger Menu Styles */
@@ -481,62 +482,74 @@ main {
     padding: 16px;
     border-radius: 14px;
 }
-
 .card {
-     border-radius: 24px;
-     padding: 24px;
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-     height: 100%;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
     transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
- }
+    background-color: var(--white);
+    border: 2px solid var(--card-border);
+    color: var(--text-color);
+}
 
- .card:hover {
-     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
- }
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
- .card.selected {
-     background-color: var(--primary-blue);
-     color: white;
- }
+/* Selected card styles - these will apply to any card with the 'selected' class */
+.card.selected {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+}
 
- .card.selected .card-compare-white {
-     color: rgba(255, 255, 255, 0.8);
- }
+.card.selected .card-title {
+    color: white;
+}
 
- .card.selected .card-separator-white {
-     border: 1px solid white;
-     opacity: 20%;
- }
+.card.selected .card-compare,
+.card.selected .card-compare-white {
+    color: rgba(255, 255, 255, 0.8);
+}
 
- .card.selected .card-icon {
-     border: 1px solid rgba(222, 222, 222, 0.2);
- }
+.card.selected .card-separator,
+.card.selected .card-separator-white {
+    border: 1px solid white;
+    opacity: 20%;
+}
 
- .card.selected .card-action-black img {
-     filter: brightness(0) invert(1);
- }
+.card.selected .card-icon {
+    border: 1px solid rgba(222, 222, 222, 0.2);
+}
 
- .balance-card:not(.selected) {
-     background-color: var(--white);
-     color: inherit;
-     border: 2px solid var(--card-border);
- }
+.card.selected .card-action-black img,
+.card.selected .card-action img {
+    filter: brightness(0) invert(1);
+}
 
- .balance-card:not(.selected) .card-compare {
-     color: #0D163A;
- }
+/* Default card styles */
+.card:not(.selected) .card-compare,
+.card:not(.selected) .card-compare-white {
+    color: var(--text-color);
+}
 
- .balance-card:not(.selected) .card-separator {
-     border: 1px solid #0D163A;
-     opacity: 10%;
- }
+.card:not(.selected) .card-title {
+    color: var(--text-color);
+}
 
- .balance-card:not(.selected) .card-action img {
-     filter: none;
- }
+.card:not(.selected) .card-separator,
+.card:not(.selected) .card-separator-white {
+    border: 1px solid var(--text-color);
+    opacity: 10%;
+}
+
+.card:not(.selected) .card-icon {
+    border: 1px solid #EEEEEE;
+}
 
  .card-grid {
      display: grid;
@@ -545,6 +558,12 @@ main {
  }
 
   @media screen and (max-width: 540px) {
+    .left-section {
+            background-color: var(--white);
+            padding: 10px;
+            border-radius: 14px;
+        }
+
       .card-grid {
           display: grid;
           grid-template-columns: repeat(1, 1fr);
@@ -584,17 +603,6 @@ main {
      font-weight: 500;
      margin: 0;
  }
-
-  .card-icon-highlighted {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 1px solid rgba(222, 222, 222, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-  }
 
  .card-icon {
      width: 50px;
@@ -636,7 +644,7 @@ main {
      display: flex;
      align-items: center;
      gap: 6px;
-     color: #0D163A;
+     color: var(--text-color);
  }
 
  .arrow-icon {
@@ -652,7 +660,7 @@ main {
  }
 
  .card-separator-white {
-     border: 1px solid #0D163A;
+     border: 1px solid var(--text-color);
      opacity: 10%;
      margin: 0;
  }
@@ -687,45 +695,16 @@ main {
       height: 40px;
   }
 
- .balance-card {
-     background-color: var(--primary-blue);
-     color: white;
-     border-radius: 24px;
-     padding: 24px;
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
- }
-
- .saving-card {
-     background-color: var(--white);
-     border-radius: 24px;
-     padding: 24px;
-     border: 2px solid var(--card-border);
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
- }
-
- .expense-card {
-     background-color: var(--white);
-     border-radius: 24px;
-     padding: 24px;
-     border: 2px solid var(--card-border);
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
- }
-
- .income-card {
-     background-color: var(--white);
-     border-radius: 24px;
-     padding: 24px;
-     border: 2px solid var(--card-border);
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
- }
+.balance-card,
+.saving-card,
+.expense-card,
+.income-card {
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
  .side-card {
      border-radius: 14px;
@@ -776,7 +755,7 @@ main {
 .discounted-price {
     font-size: 20px;
     font-weight: bold;
-    color: #0D163A;
+    color: var(--text-color);
 }
 
 .orginal-price {
