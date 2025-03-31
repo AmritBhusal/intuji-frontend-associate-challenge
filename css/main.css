@@ -559,7 +559,7 @@ main {
       }
   }
 
- @media screen and (max-width: 840px) {
+ @media screen and (min-width: 541px) and (max-width: 840px) {
     .card-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
